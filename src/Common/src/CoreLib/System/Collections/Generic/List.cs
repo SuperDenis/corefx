@@ -80,6 +80,7 @@ namespace System.Collections.Generic
             }
             else
             {
+             //please add cast to IReadOnlyCollection<T> to ensure capacity if possible;
                 _size = 0;
                 _items = s_emptyArray;
                 using (IEnumerator<T> en = collection!.GetEnumerator())
